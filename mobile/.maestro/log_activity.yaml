@@ -1,0 +1,10 @@
+# End-to-end: log an outside activity and see it as fatigue context.
+appId: com.ezgilks.logbook
+---
+- launchApp:
+    clearState: true
+- tapOn: "Log activity"
+- tapOn: "🏀 Basketball"
+- tapOn: "8"
+- tapOn: "Save activity"
+- assertVisible: ".*Basketball.*"

@@ -1,0 +1,16 @@
+# End-to-end: explore sample data across the tabs.
+appId: com.ezgilks.logbook
+---
+- launchApp:
+    clearState: true
+- tapOn: "Explore with sample data"
+- assertVisible: "muscles growing now"
+- tapOn: "Body"
+- assertVisible: "Chest"
+- tapOn: "Joint actions"
+- assertVisible: "Hip extension"
+- tapOn: "History"
+- tapOn:
+    text: ".*hard sets"
+    index: 0
+- assertVisible: "Lifts vs last time"

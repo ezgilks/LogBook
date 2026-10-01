@@ -1,0 +1,20 @@
+# End-to-end: log a workout and see the recap.
+# Run on a simulator with a dev build installed:  maestro test .maestro
+appId: com.ezgilks.logbook
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Welcome to Logbook"
+- tapOn: "Start workout"
+- tapOn: "+ Add exercise"
+- inputText: "Lateral"
+- tapOn: "Lateral Raise"
+- tapOn: "Log set 1"
+- tapOn: "Log set 2"
+- assertVisible: "2"
+- tapOn: "Finish workout"
+- assertVisible: "Recap"
+- assertVisible: "Growing for the next.*"
+- back
+- assertVisible: "1"
+- assertVisible: "muscle growing now"
